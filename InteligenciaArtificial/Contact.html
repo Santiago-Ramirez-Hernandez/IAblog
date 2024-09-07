@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Introduction to AI</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Style-Contact.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="boxMenu">
+            <h1><img src="pictures/logo.png" alt="logo" id="logo"></h1>
+            <nav class="navMenu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="que-es-IA.html">Blog</a></li>
+                    <li><a href="aplicacion.html">Aplicaciones</a></li>
+                    <li><a href="impacto.html">Impacto</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="futuro.html">Futuro</a></li>
+                    <li><a href="Recursos.html">Recursos</a></li>
+                    <li><a href="Contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  <a href="index.html">
+    <button class="button">
+        <div class="button-box">
+          <span class="button-elem">
+            <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+              ></path>
+            </svg>
+          </span>
+          <span class="button-elem">
+            <svg viewBox="0 0 46 40">
+              <path
+                d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+      
+    </a>
+
+    
+    <div id="container"></div>
+    <script id="template" type="text/x-template">
+        <div class="flip-card" onclick="toggleFlipCard()">{{ flipCard ? 'Reset' : 'Animate' }}</div>
+       
+       
+        <div class="contact-wrapper">
+            <div class="envelope {{ flipCard ? 'active' : '' }}">
+                <div class="back paper"></div>
+                <div class="content">
+                    <div class="form-wrapper">
+                        <form>
+                            <div class="top-wrapper">
+                                <div class="input">
+                                    <label>Name</label>
+                                    <input type="text" name="name"/>
+                                </div>
+                                <div class="input">
+                                    <label>Phone</label>
+                                    <input type="text" name="phone"/>
+                                </div>
+                                <div class="input">
+                                    <label>Email</label>
+                                    <input type="text" name="_replyto"/>
+                                </div>
+                            </div>
+                            <div class="bottom-wrapper">
+                                <div class="input">
+                                    <label>Subject</label>
+                                    <input type="text" name="_subject"/>
+                                </div>
+                                <div class="input">
+                                    <label>Message</label>
+                                    <textarea rows="5" name="message"></textarea>
+                                </div>
+                                <div class="submit">
+                                    <div class="submit-card" onclick="toggleFlipCard()">Send Mail</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="front paper"></div>
+            </div>
+        </div>
+    </script>
+    <script>
+        let flipCard = false;
+
+        function toggleFlipCard() {
+            flipCard = !flipCard;
+            render();
+        }
+
+        function render() {
+            const template = document.getElementById('template').innerHTML;
+            const container = document.getElementById('container');
+            container.innerHTML = template.replace(/{{\s*flipCard\s*\?\s*'([^']*)'\s*:\s*'([^']*)'\s*}}/g, (match, p1, p2) => flipCard ? p1 : p2)
+                                           .replace(/{{\s*flipCard\s*\?\s*'([^']*)'\s*}}/g, (match, p1) => flipCard ? p1 : '');
+        }
+
+        render();
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

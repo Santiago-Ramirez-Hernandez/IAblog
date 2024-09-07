@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales sobre IA</title>
+    <link rel="stylesheet" href="css/style-Tutoriales.css">
+</head>
+<body>
+
+
+
+
+    <a href="Recursos.html">
+        <button class="button">
+            <div class="button-box">
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </button>
+          
+        </a>
+    <div class="container">
+        <h1>Tutoriales sobre Inteligencia Artificial</h1>
+        <div class="tutorial-list">
+            <!-- Tarjeta de Tutorial -->
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kI2gx0aFhWpxE1RBGITY1ped3iUvY54o4AUucuLun0DT8=s176-c-k-c0x00ffffff-no-rj" alt="Tutorial 1">
+                </div>
+                <div class="tutorial-details">
+                    <h2>Introducción a IA</h2>
+                    <p><strong>Descripción:</strong> Aprende los conceptos básicos de la inteligencia artificial y sus aplicaciones.</p>
+                    <button onclick="location.href='https://www.youtube.com/watch?v=Sm7v7DDFGFc'" type="button">Ver Tutorial</button>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas de tutoriales aquí -->
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="https://interactivechaos.com/sites/default/files/2019-03/icono-tutorial-ml.jpg" alt="Tutorial 2">
+                </div>
+                <div class="tutorial-details">
+                    <h2>Aprendizaje Automático</h2>
+                    <p><strong>Descripción:</strong> Tutorial detallado sobre técnicas de aprendizaje automático y modelos.</p>
+                    <button onclick="location.href='https://interactivechaos.com/es/manual/tutorial-de-machine-learning/tutorial-de-machine-learning'" type="button">Ver Tutorial</button>
+                </div>
+            </div>
+            <div class="tutorial-card">
+                <div class="tutorial-image">
+                    <img src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Ftalent%2F1496%2Fpicture%2Foptimized%2Fhuge_3b992cefb03f3d0554785dabe3695feb-bbc4b5261d64f0f9c4e93c3a300330de.jpg&width=480" alt="Tutorial 3">
+                </div>
+                <div class="tutorial-details">
+                    <h2>Redes Neuronales</h2>
+                    <p><strong>Descripción:</strong> Explora cómo funcionan las redes neuronales y su entrenamiento.</p>
+                    <button onclick="location.href='https://www.toptal.com/machine-learning/un-tutorial-de-aprendizaje-profundo-de-perceptrones-a-redes-profundas'" type="button">Ver Tutorial</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Añadir animación de entrada a las tarjetas
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.tutorial-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 100}ms`;
+                card.classList.add('animate-card');
+            });
+        });
+    </script>
+</body>
+</html>
