@@ -13,7 +13,7 @@ main{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(0, 0, 0) 50%, rgb(14, 14, 14) 50%);
+    background-image: linear-gradient(-60deg, #152147 50%, #0D142A 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -44,7 +44,7 @@ main{
 
 .titulo{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #000000;
+    background-color: #0D142A;
     opacity: 0.9;
     position: absolute;
     margin-left: 0;
@@ -148,6 +148,7 @@ svg{
 }
 
 section h2{
+    color: #4165DA;
     font-size: 50px;
     animation: colorChange2 3s infinite;
     font-weight: bold;
@@ -155,7 +156,7 @@ section h2{
 }
 
 section h3{
-    animation: colorChange2 3s infinite;
+  color: #4165DA;
     font-size: 50px;
     font-weight: bold;
     text-align: center;
@@ -163,13 +164,13 @@ section h3{
 
 section h4{
     margin: 20px;
-    color: rgb(202, 99, 3);
+    color: 273C81;
     font-weight: bold;
     font-size: 20px;
 }
 strong{
     font-weight: bold;
-    color: rgb(202, 99, 3);
+    color: #273C81;
 }
 
 section p{
@@ -186,7 +187,7 @@ section ul li{
 
 h5{
     margin: 20px;
-    color: rgb(202, 99, 3);
+    color: #273C81;
     font-weight: bold;
     font-size: 30px;
     transition: 2s all;
@@ -209,242 +210,5 @@ p:hover{
 
 /* meadia query para celulares */
 @media (min-width: 501px) and (max-width: 1024px) {
-    header{
-        display: flex;
-        width: 1024px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background: url(pictures/fondo-impacto2.jpg);
-        padding: 0px;
-        height: 450px;
-      }
-      
-      .titulo{
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        background-color: #000000;
-        opacity: 0.9;
-        position: absolute;
-        margin-left: 0;
-        margin-top: 150px;
-        text-align: center;
-        width: 35%;
-        padding: 25px;
-        border-radius: 10%;
-        transition: 0.5s all;
-      }
-      
-      .titulo h2{
-        color: #ffffff;
-      }
-      
-      .tituloPrincipal{
-        font-size: 50px;
-        font-weight: bold;
-        color: #ffffff;
-        transition: 0.5s all;
-      }
-      
-      .descripcion{
-        font-size: 18px;
-      }
-      
-      main{
-        background-color: #161616;
-        display: flex;
-      }
-      
-      .bg {
-        animation:slide 3s ease-in-out infinite alternate;
-        background-image: linear-gradient(-60deg, rgb(0, 0, 0) 50%, rgb(14, 14, 14) 50%);
-        bottom:0;
-        left:-50%;
-        opacity:.5;
-        position:fixed;
-        right:-50%;
-        top:0;
-        z-index:-1;
-        background-attachment: fixed;
-      }
-      
-      .bg2 {
-        animation-direction:alternate-reverse;
-        animation-duration:4s;
-      }
-      
-      .bg3 {
-        animation-duration:5s;
-      }
-      
-      @keyframes slide {
-        0% {
-          transform:translateX(-25%);
-        }
-        100% {
-          transform:translateX(25%);
-        }
-      }
-      
-      .explicacion {
-        justify-content: space-between;
-        width: 500px;
-              border-radius: 10px;
-              opacity: 0.9;
-              padding: 20px;
-      }
-      
-      .explicacion p {
-        width: 100%;
-        font-size: 16px;
-        color: #cecece; /* Cambié el color a un tono oscuro para mayor legibilidad */
-        padding: 10px;
-        border-radius: 10px;
-        text-align: justify;
-        border-right: 0.15em solid rgb(255, 102, 0); /* Cursor de escritura */
-        animation: colorChange 3s infinite;
-      }
-      
-      .topics{
-        width: 100%;
-        font-size: 16px;
-        color: #cecece; /* Cambié el color a un tono oscuro para mayor legibilidad */
-        padding: 10px;
-        border-radius: 10px;
-        text-align: justify;
-        border-right: 0.15em solid rgb(255, 102, 0); /* Cursor de escritura */
-        animation: colorChange 3s infinite;
-      }
-      
-      .topics h3{
-        font-size: 20px;
-      }
-      
-      .topics p {
-        width: 90%;
-        margin: 25px;
-        font-size: 16px;
-        color: #ffffff; /* Cambié el color a un tono oscuro para mayor legibilidad */
-        padding: 10px;
-        border-radius: 10px;
-        text-align: justify;
-        transition: font-size 2s, color 1s;
-        animation: colorChange 3s infinite;
-      }
-      
-      .topics li {
-        width: 90%;
-        margin: 25px;
-        font-size: 16px;
-        color: #ffffff; /* Cambié el color a un tono oscuro para mayor legibilidad */
-        padding: 10px;
-        border-radius: 10px;
-        text-align: justify;
-        transition: font-size 2s, color 1s;
-        animation: colorChange 3s infinite;
-      }
-      
-      
-      
-      .liContenido a{
-        text-decoration: none;
-        margin: 10px;
-        display: block;
-        color: #2b2b2b;
-        font-size: 15px;
-        transition: font-size 2s, color 2s; /* Incluye font-size y color en la transición */
-      }
-      
-      .liContenido a:hover{
-        color: #ffffff;
-        transition: 1s all;
-      }
-      
-      .img-generica{
-        border-radius: 5px;
-        width: 80%;
-        height: 400px;
-        margin: 30px 90px;
-      
-      }
-      
-      
-      section h3{
-        color: orangered;
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
-        animation: colorChange2 3s infinite;
-      }
-      
-      section h4{
-        margin: 20px;
-        color: orange;
-        font-weight: bold;
-        font-size: 18px;
-      }
-      
-      
-      h5{
-        margin: 20px;
-        color: rgb(202, 99, 3);
-        font-weight: bold;
-        font-size: 30px;
-        transition: 2s all;
-      }
-      
-      h3:hover{
-        color:  rgb(101, 101, 201);
-        transition: 2s all;
-      }
-      
-      p:hover{
-        color:wheat;
-        transition: 2s all;
-      }
-      
-      .video{
-        width: 70%;
-        margin: 2em 1em;
-      }
-}
-
-@keyframes colorChange {
-    0% {
-        color: white;
-    }
-    33% {
-        color: wheat;
-    }
-    66% {
-        color: rgb(247, 215, 155);
-    }
-    100% {
-        color: white;
-    }
-}
-
-@keyframes colorChange2 {
-    0% {
-        color: orangered;
-    }
-    33% {
-        color: rgb(252, 0, 176);
-    }
-    66% {
-        color: rgb(16, 209, 26);
-    }
-    100% {
-        color: rgb(255, 153, 0);
-    }
-}
-
-/* Animación de flotación */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    
 }

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1023;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #131a33;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    background-color: #1e2a4a;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    color: #00aaff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1e2a4a;
+    border: 1px solid #2a3b66;
+    color: white;
+    border-radius: 5px;
+}
+
+.form-group select {
+    padding: 8px;
+    background-color: #1e2a4a;
+    color: white;
+    border: 1px solid #2a3b66;
+    margin-left: 10px;
+}
+
+.add-button, .delete-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.add-button {
+    background-color: #00cc66;
+}
+
+.delete-button {
+    background-color: #cc0033;
+}
+
+.submit-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 20px;
+    font-size: 16px;
+}

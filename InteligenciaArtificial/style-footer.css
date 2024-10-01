@@ -55,7 +55,7 @@ footer {
   
   #star5:hover ~ label > svg,
   #star5:hover > svg {
-    fill: #7951ac !important;
+    fill: #5f51ac !important;
   }
   
   #star1:checked ~ label > svg {
@@ -168,7 +168,7 @@ footer {
 }
 
 .footer-box .tipus {
-  background-image: linear-gradient(to right, #d831b4, #ffffff);
+  background-image: linear-gradient(to right, #45A3DB, #ffffff);
   background-size: 200% 100%;
   background-clip: text;
   color: transparent;

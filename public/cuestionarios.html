@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Cuestionario</title>
+    <link rel="stylesheet" href="cuestioanrios.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Agregando cuestionario</h2>
+        </div>
+        
+        <form class="form">
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo">
+            </div>
+            
+            <div class="form-group">
+                <label for="categoria">Categoría</label>
+                <input type="text" id="categoria" name="categoria">
+                <select>
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option>
+                </select>
+                <button class="add-button">Agregar +</button>
+                <button class="delete-button">Eliminar X</button>
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <input type="text" id="descripcion" name="descripcion">
+            </div>
+
+            <!-- Pregunta 1 -->
+            <div class="form-group">
+                <label for="pregunta1">Pregunta 1*</label>
+                <input type="text" id="pregunta1" name="pregunta1">
+                
+                <label>Respuestas:</label>
+                <input type="text" placeholder="Respuesta 1">
+                <input type="text" placeholder="Respuesta 2">
+                <input type="text" placeholder="Respuesta 3">
+                <input type="text" placeholder="Respuesta 4">
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="form-group">
+                <label for="pregunta2">Pregunta 2*</label>
+                <input type="text" id="pregunta2" name="pregunta2">
+                
+                <label>Respuestas:</label>
+                <input type="text" placeholder="Respuesta 1">
+                <input type="text" placeholder="Respuesta 2">
+                <input type="text" placeholder="Respuesta 3">
+                <input type="text" placeholder="Respuesta 4">
+            </div>
+
+            <button class="submit-button">Publicar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros Importantes sobre IA</title>
+    <link rel="stylesheet" href="style-Libros.css">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      #search-form {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+      #books {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      .book {
+          border: 1px solid #ccc;
+          padding: 10px;
+          margin: 10px;
+          width: 200px;
+      }
+      .book img {
+          max-width: 100%;
+      }
+  </style>
+</head>
+
+    
+    <a href="Recursos.html">
+        <button class="button">
+            <div class="button-box">
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                  <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </button>
+          
+        </a>
+
+    <div class="container">
+
+        
+        <h1>Libros Importantes sobre Inteligencia Artificial</h1>
+        <div class="book-list">
+            <!-- Tarjeta de Libro -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://m.media-amazon.com/images/I/91ekAJi0OIL._SY522_.jpg" alt="Artificial Intelligence: A Modern Approach">
+                </div>
+                <div class="book-details">
+                    <h2>Artificial Intelligence: A Modern Approach</h2>
+                    <p><strong>Autores:</strong> Stuart Russell, Peter Norvig</p>
+                    <p><strong>Descripción:</strong> Considerado el libro de referencia en IA, abarca una amplia gama de temas, desde los fundamentos hasta los métodos avanzados.</p>
+                    <button onclick="location.href='https://www.amazon.com/Artificial-Intelligence-Modern-Approach-4th/dp/0134610997'" type="button">Ver más</button>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas de libros aquí -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://m.media-amazon.com/images/I/61AA6wv7ieL._SY445_SX342_.jpg" alt="Deep Learning">
+                </div>
+                <div class="book-details">
+                    <h2>Deep Learning</h2>
+                    <p><strong>Autores:</strong> Ian Goodfellow, Yoshua Bengio, Aaron Courville</p>
+                    <p><strong>Descripción:</strong> Un recurso fundamental para el aprendizaje profundo, cubriendo teoría y aplicaciones prácticas.</p>
+                    <button onclick="location.href='https://www.amazon.com/Deep-Learning-Adaptive-Computation-Machine/dp/0262035618'" type="button">Ver más</button>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="https://m.media-amazon.com/images/I/61ECBlvkBCL._SY445_SX342_.jpg" alt="Pattern Recognition and Machine Learning">
+                </div>
+                <div class="book-details">
+                    <h2>Pattern Recognition and Machine Learning</h2>
+                    <p><strong>Autor:</strong> Christopher Bishop</p>
+                    <p><strong>Descripción:</strong> Cubre técnicas y conceptos esenciales en el reconocimiento de patrones y el aprendizaje automático.</p>
+                    <button onclick="location.href='https://www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738'" type="button">Ver más</button>
+                </div>
+            </div>
+        </div>
+   
+
+
+
+    <h1>No encontraste el libro que buscabas ?</h1>
+    <p id="Buscar">Puedes buscarlo aqui </p>
+    <div></div>
+    <form id="search-form">
+      <div class="centered-content">
+        <input type="text" id="query" placeholder="Search for books" required>
+        <button type="submit">Search</button>
+      </div>
+      <div id="books"></div>
+    </form>
+  </div>
+  
+    <script >
+const apiKey = 'AIzaSyDbMTl5_1KwhovmATBH4x9uWW_uNgsmcYI';
+
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const query = document.getElementById('query').value;
+    searchBooks(query);
+});
+
+function searchBooks(query) {
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => {
+            displayBooks(data.items);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function displayBooks(books) {//books es el arreglo de objetos 
+    const booksContainer = document.getElementById('books');
+    booksContainer.innerHTML = '';//Limpia el contenerdo
+
+    if (!books) {//comprueba si el parameto es falso
+        booksContainer.innerHTML = '<p>No books found</p>';//para mostrar este mensaje 
+        return;
+    }
+
+    books.forEach(book => {// este es para iterar sobre cada objeto book en el arreglo books usando el forEach
+        const bookElement = document.createElement('div');//Para cada elemento book se va a crear un elemento div que va a ser un libro en la interfaz
+        bookElement.classList.add('book');// aqui solo se anade una clase book para aplicar los estilos 
+
+        //extrae la informacion de los libros 
+        const title = book.volumeInfo.title || 'No title available';
+        const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'No authors available';
+        const thumbnail = book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'No image available';
+
+        bookElement.innerHTML = `
+            <h2>${title}</h2>
+            <p>by ${authors}</p>
+            <img src="${thumbnail}" alt="${title}">
+        `;
+
+        booksContainer.appendChild(bookElement);
+    });
+}
+
+
+
+
+
+    </script>
+
+</body>
+</html>

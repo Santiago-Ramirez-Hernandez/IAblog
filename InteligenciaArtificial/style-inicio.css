@@ -12,7 +12,7 @@ header{
 
 .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, rgb(0, 0, 0) 50%, rgb(14, 14, 14) 50%);
+    background-image: linear-gradient(-60deg, #152147 50%, #0D142A 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -34,7 +34,7 @@ header{
 
 .titulo{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: #000000;
+    background-color: #0D142A;
     opacity: 0.9;
     position: absolute;
     margin-left: 0;
@@ -62,7 +62,7 @@ header{
 }
 
 .tituloPrincipal:hover{
-    color: rgb(221, 91, 4);
+    color: #4165DA;
 }
 
 main{
@@ -123,7 +123,6 @@ main section {
     display: inline-block;
     vertical-align: top;
     opacity: 0.8;
-    border-right: 0.15em solid rgb(255, 102, 0); /* Cursor de escritura */
 }
 
 .presentacion img{
@@ -218,8 +217,9 @@ main section p:hover{
 
 main article{
     width: 100%;
-    background-color: #000000;
+    background-color: #0D142A;
     background-attachment: fixed;
+    opacity: 0.90;
 }
 
 .boxArticle h2{
@@ -270,7 +270,7 @@ main article{
 }
 
 .boxArticle .title-information:hover{
-    color: orangered;
+    color: #4165DA;
     transition: font-size 0.5s, color 1s, background-color 1s; /* Incluye font-size y color en la transición */
 }
 
@@ -280,11 +280,10 @@ main article{
 }
 
 a .boton{
-    background-color: orangered;
+    background-color: #4165DA;
     color: #ffffff;
     font-size: 18px;
     font-weight: bold;
-    border-color: orangered;
     border-radius: 30px;
     transition: font-size 2s, color 1s, background-color 1s; /* Incluye font-size y color en la transición */
     cursor: pointer;
@@ -293,7 +292,7 @@ a .boton{
 }
 
 .boton:hover{
-    border-color: rgb(248, 187, 165);
+    background-color: #152147;
     font-size: 20px;
     transition: font-size 2s, color 1s, background-color 1s; /* Incluye font-size y color en la transición */
 }
@@ -337,7 +336,7 @@ a .boton{
       
       .titulo{
         font-family:Georgia, 'Times New Roman', Times, serif;
-        background-color: #000000;
+        background-color: #0D142A;
         opacity: 0.9;
         position: absolute;
         margin-left: 0;
@@ -366,41 +365,11 @@ a .boton{
       }
       
       .tituloPrincipal:hover{
-        color: rgb(221, 91, 4);
+        color: #4165DA;
       }
       
       main{
-        background-color: #000000;
-      }
-      
-      .desarrolladores{
-        width: 601px;
-        display: inline-block;
-        margin: 20px;
-        background-color: #0f0f0f;
-      }
-      
-      .desarrolladores h2{
-        text-align: center;
-        font-size: 10px;
-        margin-bottom: 0;
-        color: #4b4b4b;
-        transition: 0.5s all;
-      }
-      
-      .desarrolladores p{
-        padding: 10px;
-        text-align: center;
-        color: rgb(49, 49, 49);
-        font-size: 15px;
-        display: inline-block;
-        transition: 0.5s all;
-        
-      }
-      
-      .desarrolladores p:hover{
-        transition: 0.5s all;
-        color: #ffffff;
+        background-color: #0D142A;
       }
       
       .fecha{
@@ -560,7 +529,7 @@ a .boton{
       }
       
       .boxArticle .title-information:hover{
-        color: orangered;
+        color: #4165DA;
         transition: font-size 0.5s, color 1s, background-color 1s; /* Incluye font-size y color en la transición */
       }
       
@@ -570,11 +539,11 @@ a .boton{
       }
       
       a .boton{
-        background-color: orangered;
+        background-color: #4165DA;
         color: #ffffff;
         font-size: 18px;
         font-weight: bold;
-        border-color: orangered;
+        border-color: #4165DA;
         border-radius: 30px;
         transition: font-size 2s, color 1s, background-color 1s; /* Incluye font-size y color en la transición */
         cursor: pointer;
