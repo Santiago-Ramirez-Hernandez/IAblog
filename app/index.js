@@ -63,6 +63,29 @@ app.get('/api/questionnaires', async (req, res) => {
     res.status(500).json({ message: 'Error al obtener cuestionarios' });
   }
 });
+//Ruta para obtener las preguntas de un cuestionario especifico
+app.get('/api/questions/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+      const { rows } = await pool.query('SELECT questionid, questioncontent, score FROM Questions WHERE QuestionnaireID = $1', [id]);
+      res.json(rows);
+  } catch (error) {
+      console.error('Error al obtener preguntas:', error);
+      res.status(500).json({ message: 'Error al obtener preguntas' });
+  }
+});
+//Ruta para obtener las respuestas de un pregunta por su id
+app.get('/api/answers/:questionId', async (req, res) => {
+  const { questionId } = req.params;
+  try {
+      const query = 'SELECT answerid,questionid,answercontent,iscorrect FROM Answers WHERE questionId = $1';
+      const result = await pool.query(query, [questionId]); // Pasa la consulta y los parámetros correctamente
+      res.json(result.rows);
+  } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ error: 'Error al obtener las respuestas' });
+  }
+});
 
 // Ruta para obtener los usuarios
 app.get('/api/users', async (req, res) => {
