@@ -5,6 +5,8 @@ import {methods as authentication} from "./controllers/authentication.controller
 import path from 'path';
 import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import session from 'express-session';
+
  
 
 //server 
@@ -33,6 +35,12 @@ app.get("/api/profile", authentication.getUserProfile);
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);
 
+app.use(session({
+  secret: 'mi-secreto', // Cambia esto por una clave secreta más fuerte
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // Usa secure: true solo si tienes HTTPS
+}));
 
 // Ruta para obtener las publicaciones
 app.get('/api/publications', async (req, res) => {
@@ -78,8 +86,48 @@ app.get('/api/userProgress', async (req, res) => {
   }
 });
 
+app.post('/logout', (req, res) => {
+  req.session.destroy(err => {
+      if (err) {
+          console.error('Error al cerrar sesión:', err);
+          return res.status(500).json({ message: 'Error al cerrar sesión' });
+      }
+
+      // Establece encabezados para evitar caché
+      res.set('Cache-Control', 'no-store');
+      res.status(200).json({ message: 'Sesión cerrada exitosamente' });
+  });
+});
+
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  res.setHeader('Surrogate-Control', 'no-store');
+  next();
+});
+
+
 //middleware
 app.use((req, res) => {
-    res.status(404).send('Página no encontrada');
-  });
+  res.status(404).send('Página no encontrada');
+});
+
+
+  function isAuthenticated(req, res, next) {
+    if (req.session.user) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
+
+// Usa el middleware para proteger esta ruta
+app.get('/perfil-lector', isAuthenticated, (req, res) => {
+  res.sendFile(__dirname + '/pages/reader/perfil-lector.html');
+});
+
+
+
+
   

@@ -54,3 +54,23 @@ function updateUserProgressTable(userProgress) {
         tableBody.innerHTML += row;
     });
 }
+
+document.getElementById("logoutButton").addEventListener("click", async () => {
+    try {
+        const response = await fetch('/logout', { method: 'POST', credentials: 'include' });
+
+        if (response.ok) {
+            // Limpia el almacenamiento local
+            localStorage.clear();
+
+            // Redirige al usuario a la página de inicio de sesión
+            window.location.href = '/login';
+        } else {
+            console.error('Error al cerrar sesión.');
+        }
+    } catch (error) {
+        console.error('Error de red en el cierre de sesión:', error);
+    }
+});
+
+

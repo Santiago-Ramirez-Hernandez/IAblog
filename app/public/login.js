@@ -32,7 +32,7 @@
             }, 1000);
         } else if (result.role === 3) {
             setTimeout(() => {
-                window.location.href = "perfil-escritor.html";
+                window.location.href = "perfil-lector.html";
             }, 1000);
         }
     } else {

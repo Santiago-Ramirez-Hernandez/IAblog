@@ -22,10 +22,10 @@ document.getElementById("register-form").addEventListener("submit", async (e) =>
         const result = await res.json();  // Aquí estás esperando un JSON
         console.log(result);
         alert('Registro exitoso');
-        // Redirigir después de 2 segundos
+        // Redirigir después de 1 segundos
         setTimeout(() => {
-        window.location.href = "/perfil-admin";  // Redireccionar a la página de presentación
-        }, 2000);
+        window.location.href = "/login";  // Redireccionar a la página de presentación
+        }, 1000);
 
       } else {
         const errorResult = await res.json();  // Manejar error en JSON también
