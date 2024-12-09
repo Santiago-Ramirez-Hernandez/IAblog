@@ -1,0 +1,131 @@
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(../pictures/fondo-proyectos.webp);
+    padding: 0;
+    height: 450px;
+    background-attachment: fixed;
+}
+
+h6 {
+    text-decoration: none;
+    color: azure;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+    border-bottom: solid white;
+}
+
+h3 {
+    border-top: solid white;
+}
+
+.img-generica {
+    border-radius: 5px;
+    width: 40%;
+    height: 40%;
+    margin: 30px 300px;
+    animation: float 3s ease-in-out infinite;
+}
+
+#tabla-ia {
+    width: 100%;
+    background: linear-gradient(#df06ba, rgb(101, 103, 230));
+    background-attachment: fixed;
+    padding: 200px;
+    opacity: 0.8;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+#tabla-ia p {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+#tabla-ia img {
+    width: 80%;
+    height: 80%;
+    margin: 20px 150px;
+}
+
+h5 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (menos de 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        height: 300px; /* Ajustar altura en pantallas pequeñas */
+    }
+
+    h6 {
+        font-size: 35px; /* Reducir el tamaño de la fuente */
+        margin-bottom: 30px;
+    }
+
+    .img-generica {
+        width: 70%; /* Aumentar el tamaño de la imagen en pantallas más pequeñas */
+        height: auto; /* Mantener la relación de aspecto */
+        margin: 20px auto;
+    }
+
+    #tabla-ia {
+        padding: 50px; /* Reducir el padding */
+    }
+
+    #tabla-ia p {
+        width: 90%; /* Ajustar el ancho */
+    }
+
+    #tabla-ia img {
+        width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
+        height: auto;
+        margin: 10px auto;
+    }
+
+    h5 {
+        font-size: 30px; /* Reducir el tamaño de la fuente */
+    }
+}
+
+/* Pantallas muy pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        height: 250px; /* Ajustar la altura para pantallas muy pequeñas */
+    }
+
+    h6 {
+        font-size: 28px; /* Reducir aún más el tamaño de la fuente */
+        margin-bottom: 20px;
+    }
+
+    .img-generica {
+        width: 80%; /* Hacer la imagen más grande */
+        margin: 20px auto;
+    }
+
+    #tabla-ia {
+        padding: 30px; /* Reducir más el padding */
+    }
+
+    #tabla-ia p {
+        width: 95%; /* Ajustar el ancho al máximo */
+    }
+
+    #tabla-ia img {
+        width: 100%; /* Asegurar que la imagen ocupe todo el ancho */
+        margin: 5px auto;
+    }
+
+    h5 {
+        font-size: 24px; /* Reducir el tamaño de la fuente */
+    }
+}
