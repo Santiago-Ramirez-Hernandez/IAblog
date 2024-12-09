@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #0D142A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background: url(../pictures/fondo-apliacion-uso.jpg);
+    background-attachment: fixed;
+    padding: 0px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    animation: changeBorderColor 5s infinite;
+    background-attachment: fixed;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #152147 50%, #0D142A 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #0D142A;
+    opacity: 0.9;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 150px;
+    text-align: center;
+    width: 35%;
+    padding: 30px;
+    border-radius: 10%;
+    transition: 0.5s all;
+}
+
+.titulo h2 {
+    color: #ffffff;
+}
+
+.tituloPrincipal {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.5s all;
+}
+
+.explicacion {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.explicacion p {
+    margin-top: 50px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+    text-align: center;
+}
+
+.topics {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.carrusel {
+    margin-top: 30px;
+    margin-left: 200px;
+    position: relative;
+    width: 80%;
+    height: 320px;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carrusel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carrusel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carrusel-control.prev {
+    left: 10px;
+}
+
+.carrusel-control.next {
+    right: 10px;
+}
+
+.topics p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+    animation: colorChange 3s infinite;
+}
+
+.liContenido a {
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    color: #273C81;
+    font-size: 15px;
+    transition: font-size 2s, color 2s;
+}
+
+.liContenido a:hover {
+    color: #ffffff;
+    transition: 1s all;
+}
+
+.img-generica {
+    border-radius: 5px;
+    width: 80%;
+    height: 400px;
+    margin: 30px 90px;
+}
+
+#arte-con-ia {
+    width: 100%;
+    background: linear-gradient(#df06ba, rgb(101, 103, 230));
+    background-attachment: fixed;
+    padding: 200px;
+    opacity: 0.8;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+#arte-con-ia p {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+#arte-con-ia h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section {
+    margin: 10px 200px;
+    padding: 25px;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+section h3 {
+    color: #4165DA;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    animation: colorChange2 3s infinite;
+}
+
+section h4 {
+    margin: 20px;
+    color: #273C81;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+}
+
+h5 {
+    margin: 20px;
+    color: #273C81;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 2s all;
+}
+
+h3:hover {
+    color: rgb(101, 101, 201);
+    transition: 2s all;
+}
+
+p:hover {
+    color: wheat;
+    transition: 2s all;
+}
+
+.video {
+    width: 560px;
+    margin: 3em auto;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 1024px) {
+    header {
+        height: 350px;
+        background-size: cover;
+    }
+
+    .titulo {
+        width: 50%;
+        margin-top: 120px;
+    }
+
+    .carrusel {
+        margin-left: 50px;
+        margin-right: 50px;
+        width: 90%;
+    }
+
+    .topics, .explicacion {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .img-generica {
+        width: 90%;
+        height: 300px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 300px;
+    }
+
+    .titulo {
+        width: 70%;
+        margin-top: 100px;
+    }
+
+    .carrusel {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    .topics p, .explicacion p, section p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #arte-con-ia {
+        padding: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        width: 80%;
+        margin-top: 80px;
+        padding: 20px;
+    }
+
+    .tituloPrincipal {
+        font-size: 30px;
+    }
+
+    .img-generica {
+        width: 100%;
+        height: 200px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .video {
+        width: 100%;
+    }
+}

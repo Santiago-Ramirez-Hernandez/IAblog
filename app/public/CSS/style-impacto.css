@@ -1,0 +1,290 @@
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(../pictures/fondo-impacto2.jpg);
+    padding: 0px;
+    height: 450px;
+    background-attachment: fixed;
+}
+
+main {
+    animation: changeBorderColor 5s infinite; /* Duración de la animación y repetición infinita */
+    background-attachment: fixed;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #152147 50%, #0D142A 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #0D142A;
+    opacity: 0.9;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 150px;
+    text-align: center;
+    width: 35%;
+    padding: 30px;
+    border-radius: 10%;
+    transition: 0.5s all;
+}
+
+.titulo h2 {
+    color: #ffffff;
+}
+
+.tituloPrincipal {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.5s all;
+}
+
+.itulop {
+    background-color: #000000;
+    opacity: 0.8;
+    padding: 15px;
+}
+
+.explicacion {
+    width: 1000px;
+}
+
+.explicacion p {
+    margin-top: 50px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+    text-align: center;
+    animation: colorChange 3s infinite;
+}
+
+.menuContent {
+    margin: 10px;
+    background: linear-gradient(#ff5e00, rgb(22, 22, 22));
+    width: 130px;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 1000;
+}
+
+.menuContent h5 {
+    font-size: 15px;
+    vertical-align: top;
+}
+
+.liContenido a {
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    color: #2b2b2b;
+    font-size: 15px;
+    transition: font-size 2s, color 2s;
+}
+
+.liContenido a:hover {
+    color: #ffffff;
+    transition: 1s all;
+}
+
+svg {
+    vertical-align: bottom;
+}
+
+.topics {
+    width: 1000px;
+    margin: 10px 200px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+    animation: changeBorderColor 5s infinite;
+    opacity: 0.9;
+    animation: colorChange2 3s infinite;
+}
+
+.topics p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+    animation: colorChange 3s infinite;
+}
+
+.img-generica {
+    border-radius: 5px;
+    width: 80%;
+    height: 400px;
+    margin: 30px 90px;
+    animation: float 3s ease-in-out infinite;
+}
+
+section h2 {
+    color: #4165DA;
+    font-size: 50px;
+    animation: colorChange2 3s infinite;
+    font-weight: bold;
+    text-align: center;
+}
+
+section h3 {
+    color: #4165DA;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section h4 {
+    margin: 20px;
+    color: 273C81;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+strong {
+    font-weight: bold;
+    color: #273C81;
+}
+
+section p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: font-size 2s, color 1s, background-color 1s;
+    padding: 20px;
+}
+
+section ul li {
+    font-size: 20px;
+    color: white;
+}
+
+h5 {
+    margin: 20px;
+    color: #273C81;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 2s all;
+}
+
+h3:hover {
+    color: rgb(101, 101, 201);
+    transition: 2s all;
+}
+
+p:hover {
+    color: wheat;
+    transition: 2s all;
+}
+
+.video {
+    width: 560px;
+    margin: 3em auto;
+}
+
+/* Media query para pantallas de tabletas y pantallas medianas (501px a 1024px) */
+@media (min-width: 501px) and (max-width: 1024px) {
+    header {
+        height: 350px;
+    }
+
+    .titulo {
+        width: 50%; /* Aumenta el ancho del título en pantallas medianas */
+        margin-top: 100px;
+    }
+
+    .tituloPrincipal {
+        font-size: 45px; /* Reduce el tamaño del título */
+    }
+
+    .img-generica {
+        width: 70%;
+        height: 300px;
+        margin: 20px auto; /* Centrar la imagen */
+    }
+
+    .topics {
+        width: 80%; /* Hacer el contenedor de los temas más pequeño */
+        margin: 10px auto;
+    }
+
+    .explicacion {
+        width: 80%;
+    }
+
+    .video {
+        width: 100%; /* Ajusta el tamaño del video */
+    }
+}
+
+/* Media query para dispositivos móviles (pantallas más pequeñas de 501px) */
+@media (max-width: 500px) {
+    header {
+        height: 250px; /* Ajustar la altura del encabezado en móviles */
+    }
+
+    .titulo {
+        width: 70%; /* Título más grande en pantallas pequeñas */
+        margin-top: 60px;
+    }
+
+    .tituloPrincipal {
+        font-size: 35px; /* Reducir tamaño del título */
+    }
+
+    .img-generica {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .topics {
+        width: 90%; /* Ajustar el contenedor de los temas */
+        margin: 10px auto;
+    }
+
+    .explicacion {
+        width: 90%;
+    }
+
+    .video {
+        width: 100%; /* Ajustar el tamaño del video */
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    section h2, section h3 {
+        font-size: 30px;
+    }
+
+    section p {
+        font-size: 18px; /* Reducir el tamaño de la fuente */
+    }
+}

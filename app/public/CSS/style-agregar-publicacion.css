@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1a26;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    background-color: #15232E;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-info {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+}
+
+.content-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1A2A38;
+    border-radius: 10px;
+}
+
+.form-header h3 {
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 2px solid #1F8EF1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.questionnaire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    background-color: #1F2D3A;
+    color: white;
+}
+
+textarea {
+    resize: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-button, .delete-button {
+    background-color: #1F8EF1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #E74C3C;
+}
+
+.add-button:hover {
+    background-color: #105BB5;
+}
+
+.delete-button:hover {
+    background-color: #C0392B;
+}
+
+.submit-button {
+    background-color: #1F8EF1;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #105BB5;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .add-button, .delete-button {
+        width: 100%;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .profile-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .profile-info h2 {
+        font-size: 20px;
+    }
+
+    .form-header h3 {
+        font-size: 16px;
+    }
+
+    .questionnaire-form {
+        gap: 12px;
+    }
+
+    input, select, textarea {
+        font-size: 12px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

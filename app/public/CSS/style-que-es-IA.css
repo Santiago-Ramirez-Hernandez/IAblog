@@ -1,0 +1,395 @@
+/* Estilos generales */
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(../pictures/fondo-que-es.png);
+    padding: 0px;
+    height: 500px;
+    background-attachment: fixed;
+}
+
+.titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #0D142A;
+    opacity: 0.9;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 150px;
+    text-align: center;
+    width: 35%;
+    padding: 30px;
+    border-radius: 10%;
+    transition: 0.5s all;
+}
+
+.titulo h2 {
+    color: #ffffff;
+}
+
+.tituloPrincipal {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.5s all;
+}
+
+.itulop {
+    background-color: #000000;
+    opacity: 0.8;
+    padding: 15px;
+}
+
+main {
+    background-color: #0D142A;
+}
+
+.liContenido a {
+    text-decoration: none;
+    margin: 10px;
+    display: block;
+    color: #2b2b2b;
+    font-size: 15px;
+    transition: font-size 2s, color 2s;
+}
+
+.liContenido a:hover {
+    color: #ffffff;
+    transition: 1s all;
+}
+
+.boxDefinition {
+    width: 900px;
+    border-radius: 10px;
+    opacity: 0.9;
+    padding: 20px;
+}
+
+.boxDefinition h4 {
+    font-size: 40px;
+    color: #4165DA;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boxDefinition .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxDefinition .text {
+    width: 50%;
+    font-size: 20px;
+    color: #cecece;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.boxDefinition .images {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.boxDefinition .images img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.boxHistory {
+    width: 100%;
+    background: url(pictures/fondo-8.avif);
+    background-attachment: fixed;
+    padding: 200px;
+    opacity: 0.5;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+.historia {
+    width: 900px;
+    margin: auto;
+}
+
+.historia h4 {
+    font-size: 40px;
+    color: #45A3DB;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.historia p {
+    width: 90%;
+    margin: 25px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.historia img {
+    width: 50%;
+    margin: 20px 200px;
+    box-shadow: 0px 0px 20px 0.1px rgb(0, 0, 0);
+}
+
+.ComienceSuCamino {
+    width: 900px;
+    margin: auto;
+}
+
+.ComienceSuCamino h4 {
+    font-size: 40px;
+    color: #4165DA;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ComienceSuCamino p {
+    width: 90%;
+    margin: 25px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.ComienceSuCamino img {
+    width: 70%;
+    margin: 20px 150px;
+    box-shadow: 0px 0px 20px 0.1px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.boxTipeIAV {
+    width: 100%;
+    background: url(pictures/fondo-14.jpg);
+    background-attachment: fixed;
+    padding: 200px;
+    opacity: 0.8;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+.tiposDeIA {
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px #0D142A;
+}
+
+.tiposDeIA h4 {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #0D142A;
+}
+
+.tiposDeIA ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.typeN {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #0D142A;
+}
+
+.typeN .text {
+    width: 60%;
+    font-size: 20px;
+    color: #ffffff;
+    border-right: 0.15em solid #4165DA;
+    margin: 10px;
+}
+
+.typeN img {
+    width: 35%;
+    height: auto;
+    margin-top: 25px;
+    margin-right: 15px;
+}
+
+h4:hover {
+    font-size: 46px;
+    color: #45A3DB;
+}
+
+p:hover {
+    color: wheat;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+.typeN:hover {
+    background-color: rgb(0, 113, 189);
+    transition: 1s all;
+    color: #ffffff;
+}
+
+.typeN .text:hover {
+    color: #ffffff;
+}
+
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: white;
+    }
+    33% {
+        color: rgb(202, 206, 253);
+    }
+    66% {
+        color: rgb(215, 231, 255);
+    }
+    100% {
+        color: white;
+    }
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes move-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+/* Media Query para pantallas entre 501px y 1024px */
+@media (max-width: 1024px) and (min-width: 501px) {
+    .titulo {
+        width: 60%; /* Ajusta el ancho */
+        margin-top: 100px; /* Reduce el margen superior */
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    .tituloPrincipal {
+        font-size: 40px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .boxDefinition, .historia, .ComienceSuCamino {
+        width: 80%; /* Ajusta el tamaño */
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .boxDefinition .text, .historia p, .ComienceSuCamino p {
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .boxDefinition .images img, .historia img, .ComienceSuCamino img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .tipoN {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        margin-bottom: 15px;
+    }
+
+    .tipoN .text {
+        width: 100%; /* Ajusta el ancho */
+        margin-bottom: 10px;
+    }
+
+    .typeN img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+        margin-top: 10px;
+    }
+
+    h4 {
+        font-size: 30px; /* Ajusta el tamaño de la fuente */
+    }
+
+    p {
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+/* Media Query para pantallas pequeñas (menos de 500px) */
+@media (max-width: 500px) {
+    .titulo {
+        width: 80%; /* Ajusta el ancho */
+        margin-top: 50px; /* Ajusta el margen superior */
+        padding: 15px;
+    }
+
+    .tituloPrincipal {
+        font-size: 30px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .boxDefinition, .historia, .ComienceSuCamino {
+        width: 90%; /* Ajusta el tamaño */
+        margin: 15px auto;
+        padding: 10px;
+    }
+
+    .boxDefinition .text, .historia p, .ComienceSuCamino p {
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+
+    .boxDefinition .images img, .historia img, .ComienceSuCamino img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .tipoN {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        margin-bottom: 10px;
+    }
+
+    .tipoN .text {
+        width: 100%; /* Ajusta el ancho */
+        margin-bottom: 5px;
+    }
+
+    .typeN img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+        margin-top: 10px;
+    }
+
+    h4 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente */
+    }
+
+    p {
+        font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+}

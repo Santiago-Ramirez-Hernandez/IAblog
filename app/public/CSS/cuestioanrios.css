@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1023;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #131a33;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 1.5rem; /* Tamaño relativo */
+    background-color: #1e2a4a;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    color: #00aaff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"], .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e2a4a;
+    border: 1px solid #2a3b66;
+    color: white;
+    border-radius: 5px;
+}
+
+.add-button, .delete-button, .submit-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.add-button {
+    background-color: #00cc66;
+}
+
+.delete-button {
+    background-color: #cc0033;
+}
+
+.submit-button {
+    background-color: #00aaff;
+    align-self: flex-end;
+}
+
+/* Responsividad con Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+        padding: 8px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input[type="text"], .form-group select {
+        padding: 8px;
+    }
+
+    .add-button, .delete-button, .submit-button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header h2 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-group input[type="text"], .form-group select {
+        font-size: 0.9rem;
+    }
+
+    .add-button, .delete-button, .submit-button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
